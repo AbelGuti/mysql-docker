@@ -8,6 +8,9 @@ For more information and related downloads for MySQL Server and other MySQL prod
 
 # MySQL Server Docker Images
 
+
+
+
 These are optimized MySQL Server Docker images, created and maintained by the MySQL team at Oracle. The available versions are:
 
     MySQL Server 5.5 (tag: 5.5)
@@ -82,7 +85,7 @@ This variable is optional. It allows you to specify the name of a database to be
 ## `MYSQL_USER`, `MYSQL_PASSWORD`
 
 These variables are optional, used in conjunction to create a new user and set that user's password. This user will be granted superuser permissions (see above) for the database specified by the `MYSQL_DATABASE` variable. Both variables are required for a user to be created.
- 
+
 Do note that there is no need to use this mechanism to create the `root` superuser, that user gets created by default with the password set by either of the mechanisms (given or generated) discussed above.
 
 ## `MYSQL_ALLOW_EMPTY_PASSWORD`
@@ -109,7 +112,7 @@ Look for the "GENERATED ROOT PASSWORD" line in the output.
 If you also set the `MYSQL_ONETIME_PASSWORD` variable, you must now start a bash shell inside the container in order to set a new root password:
 
     docker exec -it my-container-name bash
-    
+
 Start the MySQL command line client and log in using the randomly set root password:
 
     mysql -u root -p
